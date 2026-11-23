@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Клининг Сервис — уборка квартир в Алматы</title>
+<style>
+:root{--bg:#fff;--s:#fff;--t:#0f2347;--m:#5a6b8c;--a:#1558e8;--a2:#eaf1ff;--b:#dbe5f7;--ok:#176b3a;--er:#b3261e;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media not all{:root:not([data-theme="light"]){--bg:#0b1630;--s:#122042;--t:#e9efff;--m:#a3b3d6;--a:#7aa7ff;--a2:#17295a;--b:#27407a;--ok:#6fd49a;--er:#ff8a80;--on:#06232a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1630;--s:#122042;--t:#e9efff;--m:#a3b3d6;--a:#7aa7ff;--a2:#17295a;--b:#27407a;--ok:#6fd49a;--er:#ff8a80;--on:#06232a;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--a)}h1,h2,h3{line-height:1.2;margin:0 0 .5em}h1{font-size:clamp(1.8rem,5vw,3rem)}h2{font-size:clamp(1.4rem,3.5vw,2rem)}
+.w{max-width:1080px;margin:0 auto;padding:0 18px}section{padding:44px 0}
+header{position:sticky;top:0;z-index:10;background:var(--s);border-bottom:1px solid var(--b);padding-top:env(safe-area-inset-top,0px)}
+.hd{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:10px 18px;max-width:1080px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;margin-right:auto}.s1{fill:var(--a)}.s2{fill:var(--a2)}.s3{fill:var(--b)}.s4{fill:var(--s)}.st{fill:none;stroke:var(--a);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.il{width:100%;height:auto;display:block}.hg{display:grid;gap:28px;align-items:center;grid-template-columns:1.1fr .9fr}.tr{list-style:none;padding:0;margin:20px 0 0;display:flex;gap:8px 18px;flex-wrap:wrap;font-size:.92rem;color:var(--m)}.tr li:before{content:"✓ ";color:var(--a);font-weight:700}.tiles{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:16px}.tiles svg{border-radius:16px}.stp{counter-reset:n}.stp .card:before{counter-increment:n;content:counter(n);display:inline-flex;width:36px;height:36px;border-radius:50%;background:var(--a);color:var(--on);align-items:center;justify-content:center;font-weight:700;margin-bottom:10px}.card{border-radius:20px}.btn{border-radius:999px}@media(max-width:800px){.hg{grid-template-columns:1fr}}.logo small{display:block;font-weight:400;color:var(--m);font-size:.75rem}
+nav{display:flex;gap:14px;flex-wrap:wrap}nav a{text-decoration:none;color:var(--t);font-size:.92rem}nav a:hover{color:var(--a)}
+.btn{display:inline-block;border:2px solid var(--a);background:var(--a);color:var(--on);padding:11px 20px;border-radius:10px;font:600 1rem inherit;font-family:inherit;text-decoration:none;cursor:pointer;min-height:44px}
+.btn.o{background:transparent;color:var(--a)}.btn:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--a);outline-offset:2px}
+.hero{background:linear-gradient(135deg,var(--a2),var(--bg));padding:56px 0}.hero p{max-width:620px;color:var(--m);font-size:1.1rem}.row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.card{background:var(--s);border:1px solid var(--b);border-radius:14px;padding:18px}.price{font-size:1.4rem;font-weight:700;color:var(--a)}
+.note{color:var(--m);font-size:.92rem}ul.c{margin:0;padding-left:20px}
+.calc{background:var(--s);border:1px solid var(--b);border-radius:16px;padding:22px;max-width:640px}
+.bar{height:8px;background:var(--a2);border-radius:8px;overflow:hidden;margin:6px 0 18px}.bar i{display:block;height:100%;background:var(--a);width:20%;transition:width .2s}
+fieldset{border:0;padding:0;margin:0}legend{font-weight:600;margin-bottom:10px;padding:0}
+.opt{display:flex;gap:10px;align-items:center;padding:11px 12px;border:1px solid var(--b);border-radius:10px;margin-bottom:8px;cursor:pointer;min-height:44px}
+.opt input{width:20px;height:20px;accent-color:var(--a)}.opt:has(input:checked){border-color:var(--a);background:var(--a2)}
+input[type=range]{width:100%;accent-color:var(--a)}input[type=tel]{width:100%;font:inherit;padding:12px;border:1px solid var(--b);border-radius:10px;background:var(--bg);color:var(--t)}
+.err{color:var(--er);font-weight:600;min-height:1.4em;margin:8px 0}.ok{color:var(--ok);font-weight:600}
+.sum{background:var(--a2);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:.95rem}
+details{background:var(--s);border:1px solid var(--b);border-radius:10px;padding:12px 16px;margin-bottom:8px}summary{cursor:pointer;font-weight:600}
+footer{background:var(--s);border-top:1px solid var(--b);padding:28px 0 90px;font-size:.92rem}
+.fab{display:none;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));background:var(--s);border-top:1px solid var(--b)}
+.fab a{flex:1;text-align:center}
+.hero{position:relative;overflow:hidden}.bl{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;background:var(--a);animation:fl 12s ease-in-out infinite alternate;pointer-events:none}.b1{width:340px;height:340px;top:-90px;right:-60px}.b2{width:260px;height:260px;bottom:-80px;left:-60px;background:#5ac8ff;animation-delay:-5s}@keyframes fl{to{transform:translate(40px,30px) scale(1.15)}}.hg>*{position:relative}
+h1 .g{background:linear-gradient(90deg,var(--a),#22c1ff,var(--a));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 5s linear infinite}@keyframes sh{to{background-position:200% 0}}
+.fl{animation:bob 5s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-10px)}}.tw{animation:tw 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes tw{50%{transform:scale(.4) rotate(45deg);opacity:.4}}
+.bu{fill:var(--s);stroke:var(--a);stroke-width:2;animation:bu 4s ease-in infinite;transform-box:fill-box}@keyframes bu{0%{transform:translateY(40px);opacity:0}30%{opacity:1}100%{transform:translateY(-70px);opacity:0}}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s cubic-bezier(.2,.7,.2,1),box-shadow .25s,border-color .25s;transition-delay:var(--d,0s)}.rv.in{opacity:1;transform:none}.card.rv.in:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(21,88,232,.18);border-color:var(--a);transition-delay:0s}
+.btn{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(21,88,232,.3)}.btn:not(.o)::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-100%);animation:shn 3.5s infinite}@keyframes shn{60%,100%{transform:translateX(100%)}}
+#sp{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),#22c1ff);z-index:30}
+.mq{overflow:hidden;background:var(--a);color:var(--on);padding:14px 0;white-space:nowrap}.mq div{display:inline-block;animation:mq 30s linear infinite}.mq span{margin:0 22px;font-weight:600}.mq span:before{content:"✦ ";opacity:.7}@keyframes mq{to{transform:translateX(-50%)}}
+.dk{background:linear-gradient(135deg,#0a2a8c,#1558e8 60%,#22a6ff);color:#fff}.dk .note{color:#d6e4ff}.dk .card{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff}.dk .price{color:#fff}.dk a{color:#fff}
+.ba{position:relative;max-width:640px;margin:0 auto;border-radius:20px;overflow:hidden;user-select:none;border:1px solid var(--b)}.ba .dirty{position:absolute;inset:0;clip-path:inset(0 0 0 var(--p,50%))}.dirty svg{filter:grayscale(.6) sepia(.5) brightness(.75)}.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}.hd2{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:#fff;pointer-events:none}.hd2:after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:#fff;color:#1558e8;display:flex;align-items:center;justify-content:center;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.25)}.lb{position:absolute;top:12px;background:rgba(0,0,0,.5);color:#fff;padding:2px 10px;border-radius:99px;font-size:.8rem;pointer-events:none}
+.st:not([hidden]){animation:stin .35s}@keyframes stin{from{opacity:0;transform:translateX(16px)}}
+.tiles svg{width:100%;height:auto;display:block}.hero{background:linear-gradient(135deg,#d6e6ff,#fff 60%,#dff1ff)}.hero p{color:#3d5176}.card{box-shadow:0 2px 10px rgba(21,88,232,.07)}
+.art{position:relative}.chip{position:absolute;left:-12px;bottom:28px;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:0 10px 30px rgba(21,88,232,.22);display:flex;gap:10px;align-items:center;font-size:.85rem;color:var(--t)}.chip i{font-style:normal;width:28px;height:28px;border-radius:50%;background:var(--a);color:#fff;display:flex;align-items:center;justify-content:center}.chip small{display:block;color:var(--m)}.tag{position:absolute;top:14px;right:14px;background:#fff;border-radius:99px;padding:3px 12px;font:600 .72rem system-ui;letter-spacing:.08em;color:var(--a)}.eb{display:flex;align-items:center;gap:10px;font-size:.78rem;font-weight:700;letter-spacing:.1em;color:var(--a);margin-bottom:10px}.eb i{width:8px;height:8px;border-radius:50%;background:var(--a)}h1 em,h2 em{font-style:italic;color:var(--a)}.sv{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:18px 0}.sc .sn{display:flex;justify-content:space-between;align-items:center;font-size:.72rem;letter-spacing:.08em;color:var(--m);margin-bottom:12px}.sc .sn b{width:28px;height:28px;border-radius:50%;background:var(--a2);color:var(--a);display:flex;align-items:center;justify-content:center}.sc .ill{border-radius:14px;margin-bottom:14px}.sc p{color:var(--m);margin:0 0 10px}.sc a{font-weight:600;text-decoration:none}.sc:first-child{border-color:var(--a);background:linear-gradient(180deg,#f3f8ff,#fff)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(max-width:700px){.fab{display:flex}nav{display:none}.hd .btn.wa{display:none}}
+</style></head><body>
+<div id="sp"></div><header><div class="hd"><div class="logo"><svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" class="s1"/><path d="M19 7l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" class="s4"/><circle cx="31" cy="30" r="3.5" class="s4"/></svg><span>Клининг Сервис<small>Алматы</small></span></div>
+<nav aria-label="Основная навигация"><a href="#prices">Цены</a><a href="#services">Услуги</a><a href="#calc">Калькулятор</a><a href="#faq">FAQ</a><a href="#contacts">Контакты</a></nav>
+<a class="btn o wa" href="#contacts" data-wa>WhatsApp</a><a class="btn" href="tel:+77477088880">8 (747) 708-88-80</a></div></header>
+<main>
+<section class="hero"><i class="bl b1"></i><i class="bl b2"></i><div class="w hg"><div><h1>Уборка квартир <span class="g">в Алматы</span></h1>
+<p>Влажная, генеральная уборка и уборка после ремонта. Ориентировочные цены, выбор параметров и заявка на расчёт — на одной странице. Компания предлагает бесплатную консультацию и бесплатный выезд сотрудника для оценки.</p>
+<div class="row"><a class="btn" href="#calc">Рассчитать стоимость</a><a class="btn o" href="tel:+77477088880">Позвонить</a></div><ul class="tr"><li>Профессиональное оборудование</li><li>Обучение сотрудников</li><li>Бесплатная консультация</li></ul></div><div class="art fl"><svg class="il" viewBox="0 0 420 340" role="img" aria-label="Светлая чистая гостиная"><defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3f0ff"/><stop offset="1" stop-color="#b9d4ff"/></linearGradient></defs><rect width="420" height="340" rx="30" fill="url(#gb)"/><circle cx="320" cy="80" r="46" fill="#fff" opacity=".6"/><circle cx="320" cy="80" r="30" fill="#fff"/><rect x="50" y="36" width="190" height="150" rx="12" fill="#fff"/><path d="M113 36v150M177 36v150M50 111h190" stroke="#b9d4ff" stroke-width="5"/><rect y="262" width="420" height="78" fill="#a9c8f8"/><rect x="318" y="198" width="40" height="64" rx="8" fill="#1558e8"/><path d="M338 198c-30-30-34-60-14-78 14 22 18 48 14 78zM338 198c26-26 40-52 30-74-18 16-30 42-30 74z" fill="#2a8fd1"/><rect x="40" y="206" width="220" height="62" rx="18" fill="#1558e8"/><rect x="56" y="170" width="188" height="64" rx="20" fill="#2f6df0"/><rect x="26" y="214" width="34" height="56" rx="14" fill="#0f46c4"/><rect x="240" y="214" width="34" height="56" rx="14" fill="#0f46c4"/><rect x="92" y="188" width="52" height="40" rx="12" fill="#dbe8ff"/><path class="tw" d="M270 40l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#fff"/><path class="tw" d="M380 150l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#fff"/><path class="tw" d="M20 100l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#fff"/><circle class="bu" cx="290" cy="150" r="7"/><circle class="bu" cx="305" cy="165" r="4" style="animation-delay:-1.4s"/></svg><div class="chip"><i>✓</i><span><b>Уборка с заботой</b><small>о вашем пространстве</small></span></div><span class="tag">ALMATY · KZ</span></div></div></section>
+<div class="mq" aria-hidden="true"><div><span>Влажная уборка</span><span>Генеральная уборка</span><span>Уборка после ремонта</span><span>Уборка после аренды</span><span>Уборка после переезда</span><span>Регулярная уборка</span><span>Химчистка мебели</span><span>Мытьё окон</span><span>Влажная уборка</span><span>Генеральная уборка</span><span>Уборка после ремонта</span><span>Уборка после аренды</span><span>Уборка после переезда</span><span>Регулярная уборка</span><span>Химчистка мебели</span><span>Мытьё окон</span></div></div>
+
+<section id="prices" class="dk"><div class="w"><h2>Цены на уборку квартир</h2>
+<div class="grid">
+<div class="card">1-комнатная<div class="price">от 12 000 ₸</div></div><div class="card">2-комнатная<div class="price">от 15 000 ₸</div></div>
+<div class="card">3-комнатная<div class="price">от 18 000 ₸</div></div><div class="card">4-комнатная<div class="price">от 20 000 ₸</div></div>
+<div class="card">5-комнатная<div class="price">от 25 000 ₸</div></div><div class="card">Влажная уборка<div class="price">от 12 000 ₸</div></div>
+<div class="card">Генеральная уборка<div class="price">от 25 000 ₸</div></div><div class="card">Уборка после ремонта<div class="price">от 30 000 ₸</div></div></div>
+<p class="note">Указаны цены «от», это не окончательная стоимость. Итог зависит от объёма и состава работ и может быть уточнён у менеджера. Цены взяты со <a href="https://cleaning-service.kz/uborka-kvartir-almaty" target="_blank" rel="noopener">страницы уборки квартир</a>; общий прайс может содержать иные значения для отдельных работ.</p></div></section>
+
+<section id="services" style="background:#f1f7ff"><div class="w"><div class="eb"><i></i>ЧИСТОТА ПОД ВАШ ЗАПРОС</div><h2>Какую уборку <em>выбираем?</em></h2><div class="sv"><article class="card sc"><div class="sn"><span>01 / КАЖДЫЙ ДЕНЬ</span><b>↗</b></div><svg class="il ill" viewBox="0 0 260 150" aria-hidden="true"><rect width="260" height="150" rx="16" fill="#e3f0ff"/><circle cx="200" cy="45" r="22" fill="#fff"/><rect x="30" y="25" width="90" height="80" rx="8" fill="#fff"/><path d="M75 25v80M30 65h90" stroke="#b9d4ff" stroke-width="4"/><rect x="150" y="82" width="34" height="46" rx="8" fill="#1558e8"/><rect x="159" y="64" width="16" height="22" rx="4" fill="#7aa7ff"/><path d="M215 128c-16-10-18-30-8-42 10 12 12 28 8 42z" fill="#2a8fd1"/></svg><h3>Влажная уборка</h3><p>Освежить пространство и навести порядок на доступных поверхностях.</p><a href="#calc">Выбрать услугу →</a></article><article class="card sc"><div class="sn"><span>02 / ГЛУБОКАЯ ЧИСТОТА</span><b>↗</b></div><svg class="il ill" viewBox="0 0 260 150" aria-hidden="true"><rect width="260" height="150" rx="16" fill="#e3f0ff"/><ellipse cx="130" cy="75" rx="95" ry="30" fill="none" stroke="#7aa7ff" stroke-width="3" transform="rotate(-18 130 75)"/><path class="tw" d="M130 40l8 22 22 11-22 11-8 22-8-22-22-11 22-11z" fill="#1558e8"/><circle class="bu" cx="60" cy="105" r="9"/><circle class="bu" cx="205" cy="110" r="6" style="animation-delay:-1.5s"/><circle class="bu" cx="190" cy="40" r="5" style="animation-delay:-2.7s"/></svg><h3>Генеральная</h3><p>Больше внимания деталям, труднодоступным местам и поверхностям.</p><a href="#calc">Выбрать услугу →</a></article><article class="card sc"><div class="sn"><span>03 / ПОСЛЕ РЕМОНТА</span><b>↗</b></div><svg class="il ill" viewBox="0 0 260 150" aria-hidden="true"><rect width="260" height="150" rx="16" fill="#cfe2ff"/><path d="M0 100h260v34a16 16 0 0 1-16 16H16a16 16 0 0 1-16-16z" fill="#a9c8f8"/><path class="tw" d="M60 40l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#fff"/><path class="tw" d="M170 60l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#fff"/><path class="tw" d="M120 110l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#fff"/></svg><h3>После ремонта</h3><p>Уборка от строительной пыли и следов работ — состав уточним при заказе.</p><a href="#calc">Выбрать услугу →</a></article></div>
+<div class="grid">
+<div class="card">Влажная уборка квартир</div><div class="card">Генеральная уборка</div><div class="card">Уборка после ремонта</div>
+<div class="card">Уборка после аренды</div><div class="card">Уборка после переезда</div><div class="card">Уборка после ЧП</div>
+<div class="card">Регулярная уборка</div><div class="card">Химчистка мебели</div><div class="card">Мытьё окон и лоджии/балкона</div></div>
+<p class="note">Цены на дополнительные услуги уточняйте у менеджера.</p></div></section>
+
+<section><div class="w"><h2>Было — стало</h2><p class="note">Иллюстрация. Потяните ползунок.</p><svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="rm" viewBox="0 0 640 360"><rect width="640" height="360" class="s2"/><rect x="60" y="50" width="170" height="140" rx="10" class="s4"/><path d="M145 50v140M60 120h170" class="st"/><rect y="280" width="640" height="80" class="s3"/><rect x="300" y="200" width="260" height="90" rx="20" class="s1"/><rect x="320" y="160" width="220" height="70" rx="18" class="s3"/><rect x="540" y="60" width="50" height="110" rx="8" class="s4"/></symbol></svg><div class="ba" id="ba"><svg class="il" viewBox="0 0 640 360" role="img" aria-label="Чистая комната"><use href="#rm"/><path d="M420 60l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" class="s1 tw"/><path d="M110 230l5 10 10 5-10 5-5 10-5-10-10-5 10-5z" class="s1 tw" style="animation-delay:-1s"/></svg><div class="dirty"><svg class="il" viewBox="0 0 640 360" aria-hidden="true"><use href="#rm"/><g fill="#6b5a3c" opacity=".55"><circle cx="100" cy="90" r="14"/><circle cx="190" cy="150" r="9"/><ellipse cx="380" cy="250" rx="40" ry="14"/><circle cx="520" cy="270" r="18"/><circle cx="260" cy="320" r="22"/></g><path d="M60 50l50 40M60 50l40 50M230 50l-40 30" stroke="#999" stroke-width="2" fill="none"/></svg></div><b class="lb" style="left:12px">После</b><b class="lb" style="right:12px">До</b><div class="hd2"></div><input type="range" min="5" max="95" value="50" aria-label="Сравнить: до и после"></div></div></section>
+<section><div class="w"><h2>Как это работает</h2><div class="grid stp"><div class="card">Выберите тип помещения, уборки, площадь и допуслуги в калькуляторе</div><div class="card">Оставьте номер телефона или позвоните</div><div class="card">Менеджер уточнит объём работ и итоговую стоимость</div></div></div></section>
+<section id="calc" style="background:var(--a2)"><div class="w"><h2>Калькулятор</h2>
+<form class="calc" id="f" novalidate aria-labelledby="ct">
+<div id="ct" class="note">Шаг <span id="sn">1</span> из 5</div><div class="bar" aria-hidden="true"><i id="pb"></i></div>
+<div class="st" data-s="1"><fieldset><legend>Тип помещения</legend><div id="g1"></div></fieldset></div>
+<div class="st" data-s="2" hidden><fieldset><legend>Тип уборки</legend><div id="g2"></div></fieldset></div>
+<div class="st" data-s="3" hidden><label for="ar"><b>Площадь:</b> <output id="av" for="ar">40 м²</output></label><input type="range" id="ar" min="15" max="250" step="5" value="40"><div class="note">от 15 до 250 м²</div></div>
+<div class="st" data-s="4" hidden><fieldset><legend>Дополнительные услуги (необязательно)</legend><div id="g4"></div></fieldset></div>
+<div class="st" data-s="5" hidden><div class="sum" id="sm"></div><label for="ph"><b>Телефон</b></label><input type="tel" id="ph" inputmode="tel" autocomplete="tel" placeholder="+7 (7__) ___-__-__" aria-describedby="er"></div>
+<div class="err" id="er" role="alert"></div>
+<div class="row"><button type="button" class="btn o" id="bk" hidden>Назад</button><button type="button" class="btn" id="nx">Далее</button></div>
+<div id="res" role="status" aria-live="polite"></div></form></div></section>
+
+<section style="background:var(--s)"><div class="w"><h2>Что входит в уборку</h2>
+<p class="note">Работы, указанные на сайте компании. Состав зависит от вида уборки и согласования с менеджером.</p>
+<ul class="c"><li>очистка санузлов: плитка, ванна, раковина, унитаз;</li><li>уборка кухни и внешних поверхностей кухонного оборудования;</li><li>окна, рамы, отливы и подоконники — при предварительном согласовании;</li><li>удаление пыли с мебели и доступных поверхностей;</li><li>зеркала, двери, дверная фурнитура, плинтусы, радиаторы, полы;</li><li>вынос мусора.</li></ul></div></section>
+
+<section><div class="w"><h2>Заявленные преимущества</h2><p class="note">Информация самой компании, без независимого подтверждения.</p>
+<div class="grid"><div class="card">Профессиональное оборудование</div><div class="card">Сотрудники проходят обучение</div><div class="card">Гипоаллергенные средства, по заявлению компании безопасные для детей и домашних животных</div><div class="card">Бесплатная консультация и бесплатный выезд для оценки</div></div></div></section>
+
+<section id="faq" style="background:#f1f7ff"><div class="w"><h2>Вопросы и ответы</h2>
+<details><summary>Как заказать уборку?</summary><p>Онлайн, по телефону или через заявку; можно написать в WhatsApp.</p></details>
+<details><summary>Сколько длится уборка?</summary><p>По данным сайта, обычно от 3 до 12 часов в зависимости от площади, загрязнения и сложности. Генеральная уборка квартиры — ориентировочно 5–6 часов, после ремонта — 7–10 часов. Это ориентиры, не гарантия.</p></details>
+<details><summary>Можно ли заказать химчистку вместе с уборкой?</summary><p>Да. Химчистку выполняют отдельные специалисты.</p></details>
+<details><summary>Моют ли окна?</summary><p>По предварительной договорённости; компания указывает мойку с двух сторон, рамами и подоконниками.</p></details>
+<details><summary>Моют ли потолки и люстры?</summary><p>Обычно нет. Индивидуально возможно за дополнительную плату при наличии у клиента лестницы или стремянки.</p></details>
+<details><summary>Как оплатить?</summary><p>Наличными, картой или юридическим лицом с подготовкой документов и счёта.</p></details>
+<details><summary>Что если вещь будет повреждена?</summary><p>Сайт сообщает о возмещении ущерба, причинённого сотрудником. Условия уточняйте у менеджера.</p></details>
+<details><summary>Сколько сотрудников приедет?</summary><p>Зависит от объёма и степени загрязнения; точное число сообщает менеджер.</p></details></div></section>
+
+<section id="contacts"><div class="w"><h2>Контакты</h2>
+<div class="grid"><div class="card"><b>Телефон</b><br><a href="tel:+77477088880">8 (747) 708-88-80</a></div><div class="card"><b>Email</b><br><a href="mailto:info@cleaning-service.kz">info@cleaning-service.kz</a></div><div class="card"><b>Адрес</b><br>г. Алматы, ул. Жамбыла, 124</div><div class="card"><b>Режим работы</b><br>09:00–20:00</div></div>
+<div class="row"><a class="btn" href="#calc">Оставить заявку на расчёт</a><a class="btn o" href="#" data-wa>WhatsApp</a></div>
+<p class="note" id="wan" role="status"></p></div></section></main>
+<footer><div class="w"><p><b>Клининг Сервис</b>, Алматы. Неофициальный макет на основе открытых сведений.</p>
+<p><a href="https://cleaning-service.kz/uborka-kvartir-almaty" target="_blank" rel="noopener">Уборка квартир</a> · <a href="https://cleaning-service.kz/prays" target="_blank" rel="noopener">Прайс</a> · <a href="https://cleaning-service.kz/calc" target="_blank" rel="noopener">Оригинальный калькулятор</a> · <a href="https://cleaning-service.kz/uborka-kvartir-almaty" target="_blank" rel="noopener">Исходный сайт</a></p></div></footer>
+<div class="fab"><a class="btn" href="tel:+77477088880">Позвонить</a><a class="btn o" href="#calc">Калькулятор</a></div>
+<script>
+// === НАСТРОЙКИ ВЛАДЕЛЬЦА ===
+// Подтверждённая ссылка WhatsApp (https://wa.me/...). Пока пусто — не выдумываем.
+const WHATSAPP_URL="";
+// Канал отправки заявок (URL приёма). Пока пусто — форма честно сообщает, что отправка не подключена.
+const SUBMIT_ENDPOINT="";
+// Тарифы: после подтверждения подключить функцию calcPrice(data) -> число, иначе null.
+const calcPrice=d=>null;
+// ===========================
+const $=s=>document.querySelector(s);
+const OPTS={1:["Квартира","Коттедж","Дом","Офис","Помещение"],2:["Влажная","Генеральная","После ремонта","После ЧП","Ежедневная"],
+4:["Помыть холодильник","Помыть микроволновку внутри","Уборка балкона","Забрать ключи","Привезти ключи","Помыть кухонные шкафы внутри","Помыть духовку","Вынос мусора","Помыть люстру","Помыть окна"]};
+[1,2].forEach(n=>$("#g"+n).innerHTML=OPTS[n].map(o=>`<label class="opt"><input type="radio" name="r${n}" value="${o}"> ${o}</label>`).join(""));
+$("#g4").innerHTML=OPTS[4].map(o=>`<label class="opt"><input type="checkbox" name="x" value="${o}"> ${o}</label>`).join("");
+document.querySelectorAll("[data-wa]").forEach(a=>{if(WHATSAPP_URL){a.href=WHATSAPP_URL;a.target="_blank";a.rel="noopener"}else a.addEventListener("click",e=>{e.preventDefault();$("#wan").textContent="Ссылка WhatsApp пока не подключена. Позвоните: 8 (747) 708-88-80";location.hash="contacts"})});
+let step=1;const er=$("#er");
+const data=()=>({room:(document.querySelector('[name=r1]:checked')||{}).value,type:(document.querySelector('[name=r2]:checked')||{}).value,area:$("#ar").value,extras:[...document.querySelectorAll('[name=x]:checked')].map(x=>x.value),phone:$("#ph").value});
+$("#ar").oninput=e=>$("#av").textContent=e.target.value+" м²";
+const ph=$("#ph");ph.addEventListener("input",()=>{let d=ph.value.replace(/\D/g,"");if(d[0]=="8"||d[0]=="7")d=d.slice(1);d=d.slice(0,10);let s="+7";if(d.length)s+=" ("+d.slice(0,3);if(d.length>=3)s+=")";if(d.length>3)s+=" "+d.slice(3,6);if(d.length>6)s+="-"+d.slice(6,8);if(d.length>8)s+="-"+d.slice(8,10);ph.value=s});
+function show(){document.querySelectorAll(".st").forEach(s=>s.hidden=+s.dataset.s!==step);$("#sn").textContent=step;$("#pb").style.width=step*20+"%";$("#bk").hidden=step==1;$("#nx").textContent=step==5?"Оставить заявку":"Далее";er.textContent="";
+if(step==5){const d=data();$("#sm").innerHTML=`<b>Ваш выбор:</b> ${d.room}, уборка: ${d.type.toLowerCase()}, площадь ${d.area} м²<br>Дополнительно: ${d.extras.length?d.extras.join(", "):"не выбрано"}`}}
+$("#bk").onclick=()=>{step--;show()};
+$("#nx").onclick=async()=>{const d=data();
+if(step==1&&!d.room)return er.textContent="Выберите тип помещения.";
+if(step==2&&!d.type)return er.textContent="Выберите тип уборки.";
+if(step<5){step++;return show()}
+if(d.phone.replace(/\D/g,"").length!==11)return er.textContent="Введите номер полностью: +7 (7XX) XXX-XX-XX.";
+const p=calcPrice(d),res=$("#res");
+if(!SUBMIT_ENDPOINT){res.innerHTML=`<p class="err">Онлайн-отправка заявки пока не подключена. Позвоните: <a href="tel:+77477088880">8 (747) 708-88-80</a></p><p>Предварительный расчёт требует подтверждения менеджера. Оставьте номер телефона — мы уточним стоимость.</p>`;return}
+try{const r=await fetch(SUBMIT_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)});if(!r.ok)throw 0;
+res.innerHTML=`<p class="ok">Заявка отправлена.</p><p>${p==null?"Предварительный расчёт требует подтверждения менеджера. Оставьте номер телефона — мы уточним стоимость.":"Предварительная стоимость: "+p+" ₸"}</p>`}
+catch(e){res.innerHTML=`<p class="err">Не удалось отправить заявку. Позвоните: <a href="tel:+77477088880">8 (747) 708-88-80</a></p>`}};
+show();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.card,section h2,.calc,details,.tiles svg,.ba,.tr li').forEach(el=>{el.classList.add('rv');const i=[...el.parentNode.children].indexOf(el);el.style.setProperty('--d',Math.min(i,8)*.07+'s');io.observe(el)});
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const po=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;po.unobserve(e.target);const el=e.target,n=+el.textContent.replace(/\D/g,'');if(rm)return;const t0=performance.now();(function f(t){const k=Math.min(1,(t-t0)/1200),v=Math.round(n*(1-Math.pow(1-k,3)));el.textContent='от '+v.toLocaleString('ru-RU')+' ₸';if(k<1)requestAnimationFrame(f)})(t0)}),{threshold:.6});
+document.querySelectorAll('.price').forEach(p=>po.observe(p));
+const bar=$('#ba');bar.querySelector('input').oninput=e=>bar.style.setProperty('--p',e.target.value+'%');
+addEventListener('scroll',()=>{$('#sp').style.width=100*scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight)+'%'},{passive:true});
+</script></body></html>
